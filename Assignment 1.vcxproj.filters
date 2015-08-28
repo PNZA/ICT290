@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Shay">
+      <UniqueIdentifier>{b9689e0b-69ff-4f55-9f09-1dcf6a6768ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Shay">
+      <UniqueIdentifier>{5cd60d79-a74c-49cd-8d9a-9c4e6ca8fce2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\math">
+      <UniqueIdentifier>{5c6ef706-f5f4-4e32-9aa9-4565d5794ed4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\math">
+      <UniqueIdentifier>{50878e00-3eee-4f6c-953f-3ec607836e37}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="shay\AABB.H">
+      <Filter>Header Files\Shay</Filter>
+    </ClInclude>
+    <ClInclude Include="shay\AABBLinkedList.h">
+      <Filter>Header Files\Shay</Filter>
+    </ClInclude>
+    <ClInclude Include="shay\AABBNode.h">
+      <Filter>Header Files\Shay</Filter>
+    </ClInclude>
+    <ClInclude Include="shay\camera.h">
+      <Filter>Header Files\Shay</Filter>
+    </ClInclude>
+    <ClInclude Include="shay\cameraMap.h">
+      <Filter>Header Files\Shay</Filter>
+    </ClInclude>
+    <ClInclude Include="shay\collision.h">
+      <Filter>Header Files\Shay</Filter>
+    </ClInclude>
+    <ClInclude Include="shay\EasySound.h">
+      <Filter>Header Files\Shay</Filter>
+    </ClInclude>
+    <ClInclude Include="shay\PlainLinkedList.h">
+      <Filter>Header Files\Shay</Filter>
+    </ClInclude>
+    <ClInclude Include="shay\PlainNode.h">
+      <Filter>Header Files\Shay</Filter>
+    </ClInclude>
+    <ClInclude Include="shay\Sound.h">
+      <Filter>Header Files\Shay</Filter>
+    </ClInclude>
+    <ClInclude Include="shay\SoundTime.h">
+      <Filter>Header Files\Shay</Filter>
+    </ClInclude>
+    <ClInclude Include="shay\texturedPolygons.h">
+      <Filter>Header Files\Shay</Filter>
+    </ClInclude>
+    <ClInclude Include="types\vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="types\angles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="math\mathlib.h">
+      <Filter>Header Files\math</Filter>
+    </ClInclude>
+    <ClInclude Include="types\polygon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="types\IDrawable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="types\world_geometry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="types\bound_box.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="shay\AABB.CPP">
+      <Filter>Source Files\Shay</Filter>
+    </ClCompile>
+    <ClCompile Include="shay\AABBLinkedList.cpp">
+      <Filter>Source Files\Shay</Filter>
+    </ClCompile>
+    <ClCompile Include="shay\AABBNode.cpp">
+      <Filter>Source Files\Shay</Filter>
+    </ClCompile>
+    <ClCompile Include="shay\camera.cpp">
+      <Filter>Source Files\Shay</Filter>
+    </ClCompile>
+    <ClCompile Include="shay\cameraMap.cpp">
+      <Filter>Source Files\Shay</Filter>
+    </ClCompile>
+    <ClCompile Include="shay\collision.cpp">
+      <Filter>Source Files\Shay</Filter>
+    </ClCompile>
+    <ClCompile Include="shay\EasySound.cpp">
+      <Filter>Source Files\Shay</Filter>
+    </ClCompile>
+    <ClCompile Include="shay\main.cpp">
+      <Filter>Source Files\Shay</Filter>
+    </ClCompile>
+    <ClCompile Include="shay\PlainLinkedList.cpp">
+      <Filter>Source Files\Shay</Filter>
+    </ClCompile>
+    <ClCompile Include="shay\PlainNode.cpp">
+      <Filter>Source Files\Shay</Filter>
+    </ClCompile>
+    <ClCompile Include="shay\Sound.cpp">
+      <Filter>Source Files\Shay</Filter>
+    </ClCompile>
+    <ClCompile Include="shay\SoundTime.cpp">
+      <Filter>Source Files\Shay</Filter>
+    </ClCompile>
+    <ClCompile Include="shay\texturedPolygons.cpp">
+      <Filter>Source Files\Shay</Filter>
+    </ClCompile>
+    <ClCompile Include="types\vector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="types\angles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="math\mathlib.cpp">
+      <Filter>Source Files\math</Filter>
+    </ClCompile>
+    <ClCompile Include="types\polygon.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="types\world_geometry.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="types\bound_box.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
