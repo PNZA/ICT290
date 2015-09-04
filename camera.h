@@ -14,6 +14,7 @@
 #include "cameraMap.h"
 #include "PlainLinkedList.h"
 #include "EasySound.h"
+#include "types\vector.h"
 
 //--------------------------------------------------------------------------------------
 
@@ -22,6 +23,7 @@ class Camera
 public:
 
 	Camera();
+	CVector GetPos();
 	virtual ~Camera() {es->Unload(stepSound);}
 
 	//----------------------------------------------------------------------------------

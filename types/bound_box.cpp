@@ -11,17 +11,16 @@ Initialises this bounding box to all 0's.
 */
 CBoundBox::CBoundBox()
 {
-	m_min = CVector(0.0, 0.0, 0.0);
-	m_max = CVector(0.0, 0.0, 0.0);
-
+	m_min.x = m_min.y = m_min.z = 0.0;
+	m_max.x = m_max.y = m_max.z = 0.0;
 }
 
 /**
-No destruction needed (yet)
+No destruction needed
 */
 CBoundBox::~CBoundBox()
 {
-
+	return;
 }
 
 void CBoundBox::ResetBounds()
@@ -56,6 +55,7 @@ void CBoundBox::UpdateBounds(const CVector& min, const CVector& max)
 	if(min.z < m_min.z)
 		m_min.z = min.z;
 
+
 	if(max.x > m_max.x)
 		m_max.x = max.x;
 	if(max.y > m_max.y)
@@ -69,12 +69,23 @@ Updates the bounds of this box to include the given point
 */
 void CBoundBox::UpdateBounds(const CVector& point)
 {
-	if(point.x < m_min.x)
-		m_min.x = point.x;
-	if(point.y < m_min.y)
-		m_min.y = point.y;
-	if(point.z < m_min.z)
-		m_min.z = point.z;
+
+	//Needed because the box might not have a min yet.
+	if(m_min.x == 0 || m_min.y == 0 || m_min.y == 0)
+	{
+		m_min = point;
+	}
+	else
+	{
+		if(point.x < m_min.x)
+			m_min.x = point.x;
+		if(point.y < m_min.y)
+			m_min.y = point.y;
+		if(point.z < m_min.z)
+			m_min.z = point.z;
+	}
+
+
 
 	if(point.x > m_max.x)
 		m_max.x = point.x;
@@ -95,7 +106,7 @@ void CBoundBox::UpdateBounds(const CBoundBox& otherBox)
 /**
 Gets the centre of this box
 */
-void CBoundBox::GetBoundsCentre(CVector& centre)
+void CBoundBox::GetBoundsCentre(CVector& centre) const
 {
 	centre.x = (m_min.x - m_max.x) * 0.5;
 	centre.y = (m_min.y - m_max.y) * 0.5;
@@ -105,7 +116,7 @@ void CBoundBox::GetBoundsCentre(CVector& centre)
 /**
 Gets a vector from this box's min to this box's max
 */
-void CBoundBox::GetBoundsSize(CVector& size)
+void CBoundBox::GetBoundsSize(CVector& size) const
 {
 	size.x = m_max.x - m_min.x;
 	size.y = m_max.y - m_min.y;
@@ -115,7 +126,7 @@ void CBoundBox::GetBoundsSize(CVector& size)
 /**
 Returns true if the given point is inside the box (will not return true if on edge!)
 */
-bool CBoundBox::ContainsPoint(const CVector& point)
+bool CBoundBox::ContainsPoint(const CVector& point) const
 {
 	if(point.x < m_min.x || point.x > m_max.x)
 		return false;
@@ -130,9 +141,18 @@ bool CBoundBox::ContainsPoint(const CVector& point)
 }
 
 /**
+Translates the box in the given direction.
+*/
+void CBoundBox::Translate(const CVector& direction)
+{
+	m_min += direction;
+	m_max += direction;
+}
+
+/**
 Returns true if the given box is intersecting this box
 */
-bool CBoundBox::IsIntersectingBox(const CBoundBox& otherBox)
+bool CBoundBox::IsIntersectingBox(const CBoundBox& otherBox) const
 {
 	if(m_min.x >= otherBox.m_max.x || m_max.x <= otherBox.m_min.x)
 		return false;
@@ -149,7 +169,7 @@ bool CBoundBox::IsIntersectingBox(const CBoundBox& otherBox)
 /**
 Returns true if the box composed of the given vectors intersects this box
 */
-bool CBoundBox::IsIntersectingBox(const CVector& min, const CVector& max)
+bool CBoundBox::IsIntersectingBox(const CVector& min, const CVector& max) const
 {
 	if(m_min.x >= max.x || m_max.x <= min.x)
 		return false;
@@ -166,7 +186,7 @@ bool CBoundBox::IsIntersectingBox(const CVector& min, const CVector& max)
 /**
 Returns true if this box is inside the other box.
 */
-bool CBoundBox::IsInsideBox(const CBoundBox& otherBox)
+bool CBoundBox::IsInsideBox(const CBoundBox& otherBox) const
 {
 	if(m_min.x < otherBox.m_min.x || m_max.x > otherBox.m_max.x)
 		return false;
@@ -183,7 +203,7 @@ bool CBoundBox::IsInsideBox(const CBoundBox& otherBox)
 /**
 Returns true if this box is inside the box composed of the given vectors.
 */
-bool CBoundBox::IsInsideBox(const CVector& min, CVector& max)
+bool CBoundBox::IsInsideBox(const CVector& min, CVector& max) const
 {
 	if(m_min.x < min.x || m_max.x > max.x)
 		return false;
@@ -200,7 +220,7 @@ bool CBoundBox::IsInsideBox(const CVector& min, CVector& max)
 /**
 Returns true if this box is valid (min < max)
 */
-bool CBoundBox::IsValid()
+bool CBoundBox::IsValid() const
 {
 	if(m_min.x > m_max.x)
 		return false;

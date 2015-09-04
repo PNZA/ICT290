@@ -10,22 +10,22 @@
 CPolygon::CPolygon()
 {
 	//not computed
-	m_cached_midpoint = NULL; 
-	m_normal = NULL;
+	m_cached_midpoint = CVector(FLT_EPSILON,FLT_EPSILON,FLT_EPSILON); 
+	m_normal = CVector(FLT_EPSILON,FLT_EPSILON,FLT_EPSILON);
 }
 
-CPolygon::CPolygon(vector<CVector> *verts, vector<tex_coord_t> *tex_coords)
+CPolygon::CPolygon(vector<CVector>& verts, vector<tex_coord_t>& tex_coords)
 {
-	assert(verts->size() == tex_coords->size());
+	assert(verts.size() == tex_coords.size());
 
 	//Looks a little messy, but it's so we only use one iterator instead of two.
 	vector<CVector>::iterator vert_itr;
 	unsigned int i = 0;
 
-	for(vert_itr = verts->begin(); vert_itr!= verts->end(); vert_itr++)
+	for(vert_itr = verts.begin(); vert_itr!= verts.end(); vert_itr++)
 	{
 		m_verts.push_back(*vert_itr);
-		m_verts.push_back((*tex_coords)[i]);
+		m_tex_coords.push_back((tex_coords)[i]);
 		i++;
 	}
 
@@ -42,29 +42,45 @@ CPolygon::~CPolygon()
 	m_tex_coords.clear();
 }
 
-vector<CVector>::iterator CPolygon::GetVerticesItr()
+vector<CVector>::iterator CPolygon::GetVerticesBegin()
 {
 	return m_verts.begin();
 }
 
-vector<tex_coord_t>::iterator CPolygon::GetTexCoordsItr()
+vector<CVector>::iterator CPolygon::GetVerticesEnd()
+{
+	return m_verts.end();
+}
+
+vector<tex_coord_t>::iterator CPolygon::GetTexCoordsBegin()
 {
 	return m_tex_coords.begin();
 }
 
-const CVector& CPolygon::GetVertex(unsigned int i)
+vector<tex_coord_t>::iterator CPolygon::GetTexCoordsEnd()
 {
-	assert(i >= 0 && i <= m_verts.size());
+	return m_tex_coords.end();
+}
+
+const CVector& CPolygon::GetVertex(unsigned int i) const
+{
+	assert(i >= 0 && i < m_verts.size());
 	return m_verts[i];
 }
 
-const tex_coord_t& CPolygon::GetTexCoord(unsigned int i)
+const tex_coord_t& CPolygon::GetTexCoord(unsigned int i) const
 {
-	assert(i >= 0 && i <= m_tex_coords.size());
+	assert(i >= 0 && i < m_tex_coords.size());
 	return m_tex_coords[i];
 }
 
 const CVector& CPolygon::GetNormal()
+{
+	ComputeNormal();
+	return m_normal;
+}
+
+const CVector& CPolygon::GetCachedNormal() const
 {
 	return m_normal;
 }
@@ -89,27 +105,27 @@ const CVector& CPolygon::GetMidpoint()
 	return m_cached_midpoint;
 }
 
-const CVector& CPolygon::GetCachedMidpoint()
+const CVector& CPolygon::GetCachedMidpoint() const
 {
 	return m_cached_midpoint;
 }
 
-unsigned int CPolygon::GetNumVertices()
+unsigned int CPolygon::GetNumVertices() const
 {
 	return m_verts.size();
 }
 
-unsigned int CPolygon::GetNumTexCoords()
+unsigned int CPolygon::GetNumTexCoords() const
 {
 	return m_tex_coords.size();
 }
 
-bool CPolygon::IsValid()
+bool CPolygon::IsValid() const
 {
-	if(m_normal != NULL && m_verts.size() > 2 && m_tex_coords.size() > 2)
-		return true;
+	if (m_verts.size() < 2 && m_tex_coords.size() < 2)
+		return false;
 
-	return false;
+	return true;
 }
 
 void CPolygon::AddVertex(CVector& vertex)
@@ -120,4 +136,13 @@ void CPolygon::AddVertex(CVector& vertex)
 void CPolygon::AddTexCoord(tex_coord_t& coord)
 {
 	m_tex_coords.push_back(coord);
+}
+
+void CPolygon::ComputeNormal()
+{
+	if(!IsValid())
+		return;
+
+	(m_verts[1] - m_verts[0]).CrossProduct((m_verts[2] - m_verts[0]), m_normal);
+	m_normal.Normalise();
 }

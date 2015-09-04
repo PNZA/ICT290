@@ -1,0 +1,317 @@
+﻿Build started 4/09/2015 7:05:03 PM.
+     1>Project "C:\Users\Sam\Dropbox\University Work Sync\ICT290\Assignment 1\Project\Assignment 1\Assignment 1.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\types\world_geometry.h(78): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\types\world_geometry.h(84): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(409): warning C4244: 'argument' : conversion from 'int' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(449): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(461): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(516): warning C4305: 'argument' : truncation from 'double' to 'GLclampf'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(808): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(814): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(824): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(829): warning C4244: 'argument' : conversion from 'double' to 'int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(1788): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(1814): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(1831): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2070): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2158): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2170): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2236): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2237): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2238): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2239): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2240): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2242): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2249): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2250): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2251): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2252): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2253): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2255): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2263): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2264): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2265): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2266): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2267): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2269): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2335): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2339): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2419): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2424): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2428): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2434): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2438): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2445): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2449): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2455): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2472): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2476): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2482): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2486): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2526): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2533): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2544): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2551): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2574): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2588): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2608): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2646): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2647): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2648): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2649): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2699): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2707): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2714): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2727): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2735): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2801): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2802): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2803): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2804): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2813): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2814): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2815): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(2816): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3107): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3309): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3324): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3340): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3360): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3383): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3387): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3406): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3410): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3430): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3434): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3454): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3458): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3519): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3520): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3521): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3522): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3524): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3531): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3532): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3533): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3534): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3535): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3544): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3546): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3547): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3548): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3549): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3550): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3558): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3559): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3560): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3561): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3562): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3563): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3573): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3574): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3575): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3576): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3586): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3587): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3588): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3589): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3597): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3598): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3599): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3600): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3601): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3602): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3612): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3613): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3614): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3615): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3625): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3626): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3627): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3628): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3635): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3636): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3637): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3638): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3639): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3640): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3641): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3648): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3650): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3651): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3652): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3653): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3654): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3661): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3663): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3664): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3665): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3666): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3667): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3675): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3676): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3677): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3678): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3679): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3690): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3692): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3703): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3705): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3749): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3751): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3752): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3753): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3753): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3754): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3755): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3755): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3761): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3763): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3764): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3765): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3765): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3766): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3767): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3767): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3777): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3779): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3780): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3781): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3782): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3783): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3789): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3791): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3792): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3793): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3794): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3795): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3825): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3829): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3886): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3913): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3927): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3955): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3982): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(3996): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4156): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4190): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4221): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4264): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4269): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4400): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4402): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4403): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4404): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4405): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4412): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4414): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4415): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4416): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4417): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4424): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4426): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4427): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4428): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4429): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4436): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4438): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4439): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4440): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4441): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4450): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4451): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4452): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4453): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4486): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4497): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4509): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4543): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4554): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4566): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4576): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4589): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4673): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4684): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4695): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4707): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4725): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4951): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4958): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4965): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4985): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4985): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4989): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(4989): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5005): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5005): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5009): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5009): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5116): warning C4244: 'argument' : conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5125): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5132): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5139): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5145): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5146): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5147): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5158): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5165): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5172): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5178): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5179): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5180): warning C4305: 'argument' : truncation from 'double' to 'GLfloat'
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5192): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5193): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5195): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5196): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5198): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5199): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5201): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5202): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5204): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5205): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5210): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5215): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5220): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5226): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5228): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5229): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5230): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5231): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5232): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5233): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5234): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5235): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5236): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5237): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\sam\dropbox\university work sync\ict290\assignment 1\project\assignment 1\main.cpp(5238): warning C4244: 'argument' : conversion from 'double' to 'const int', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Sam\Dropbox\University Work Sync\ICT290\Assignment 1\Project\Debug\Assignment 1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Sam\Dropbox\University Work Sync\ICT290\Assignment 1\Project\Debug\Assignment 1.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Sam\Dropbox\University Work Sync\ICT290\Assignment 1\Project\Debug\Assignment 1.lib" /MACHINE:X86 Debug\AABB.obj
+         Debug\AABBLinkedList.obj
+         Debug\AABBNode.obj
+         Debug\camera.obj
+         Debug\cameraMap.obj
+         Debug\collision.obj
+         Debug\EasySound.obj
+         Debug\main.obj
+         Debug\mathlib.obj
+         Debug\physics.obj
+         Debug\PlainLinkedList.obj
+         Debug\PlainNode.obj
+         Debug\player.obj
+         Debug\Sound.obj
+         Debug\SoundTime.obj
+         Debug\texturedPolygons.obj
+         Debug\angles.obj
+         Debug\bound_box.obj
+         Debug\world_geometry.obj
+         Debug\polygon.obj
+         Debug\vector.obj
+         Assignment 1.vcxproj -> C:\Users\Sam\Dropbox\University Work Sync\ICT290\Assignment 1\Project\Debug\Assignment 1.exe
+     1>Done Building Project "C:\Users\Sam\Dropbox\University Work Sync\ICT290\Assignment 1\Project\Assignment 1\Assignment 1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:07.45

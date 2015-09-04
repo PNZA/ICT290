@@ -9,16 +9,16 @@
 
 #include <assert.h>
 
+//for testing
+using namespace std;
+#include <iostream>
+
 #define VECTOR_X 0
 #define	VECTOR_Y 1
 #define VECTOR_Z 2
 
 class CVector
 {
-private:
-	void init(); //common initialisation function.
-	float length;	//the last computed length of this vector
-
 public:
 	float x;
 	float y;
@@ -31,11 +31,11 @@ public:
 	~CVector();
 
 	float GetLength();	//computes and returns the value for the length of this vector
-	float GetCachedLength();	//returns the last computed value for the length of this vector
-	float GetSQLength();	//computes and returns the value for the square length of this vector
+	float GetCachedLength() const;	//returns the last computed value for the length of this vector
+	float GetSQLength() const;	//computes and returns the value for the square length of this vector
 
-	float DotProduct(const CVector& otherVec);	//performs the vector dot product: this . otherVec
-	void CrossProduct(const CVector& otherVec, CVector& result);	//performs the vector cross product: this X otherVec -> result
+	float DotProduct(const CVector& otherVec) const;	//performs the vector dot product: this . otherVec
+	void CrossProduct(const CVector& otherVec, CVector& result) const;	//performs the vector cross product: this X otherVec -> result
 	void SetArray(float* parray); //sets this vector to the given 3 float array
 	float* GetArrayPtr() const; 
 	void Normalise();	//normalises this vector, if it is a vector and not a point
@@ -47,7 +47,7 @@ public:
 	CVector& operator+=(const CVector& otherVec);
 
 	CVector operator-(const CVector& otherVec) const;
-	CVector operator-(void);
+	CVector operator-(void) const;
 	CVector& operator-=(const CVector& otherVec);
 
 	CVector operator*(const CVector& otherVec) const;
@@ -65,6 +65,17 @@ public:
 
 	float& operator[](int i) const;
 	CVector& operator=(const CVector& otherVec);
+	
+	// just here for debug
+	friend ostream& operator<<(ostream& os, const CVector& vec)
+	{
+		os << "x: " << vec.x << " y: " << vec.y << " z: " << vec.z; 
+		return os;
+	}
+
+private:
+	void init(); //common initialisation function.
+	float length;	//the last computed length of this vector
 };
 
 //-----------------------------------------------------------------------------
@@ -119,7 +130,7 @@ inline void VectorDivide(CVector const& a, CVector const& b, CVector& result)
 Steps the vector start in the direction of the vector dir by the percentage given in s.
 e.g. start = 0,0,0 s = 0.5 dir = 1,0,0 result = 0.5, 0, 0
 */
-inline void VectorMultiplyAdd(CVector const& start, float s, CVector const& dir, CVector result)
+inline void VectorMultiplyAdd(CVector const& start, float s, CVector const& dir, CVector& result)
 {
 	result.x = start.x + s*dir.x;
 	result.y = start.y + s*dir.y;
@@ -152,9 +163,9 @@ e.g. if source is 1,0,0 and source2 is 2,0,0 and percent is 0.5, destination wil
 inline void VectorInterp(const CVector& source, const CVector& source2, float percent, CVector& destination)
 {
 
-	destination[VECTOR_X] = source[VECTOR_X] + (source2[VECTOR_X] - source[VECTOR_X]) * percent;
-	destination[VECTOR_Y] = source[VECTOR_Y] + (source2[VECTOR_Y] - source[VECTOR_Y]) * percent;
-	destination[VECTOR_Z] = source[VECTOR_Z] + (source2[VECTOR_Z] - source[VECTOR_Z]) * percent;
+	destination.x = source.x + (source2.x - source.x) * percent;
+	destination.y = source.y + (source2.y - source.y) * percent;
+	destination.z = source.z + (source2.z - source.z) * percent;
 }
 
 /**
@@ -204,7 +215,7 @@ inline CVector CVector::operator-(const CVector& otherVec) const
 	return result;
 }
 
-inline CVector CVector::operator-(void)
+inline CVector CVector::operator-(void) const
 {
 	return CVector(-x, -y, -z);
 }
@@ -302,5 +313,4 @@ inline float& CVector::operator[](int i) const
 	assert(i > 0 && i < 3);
 	return((float*)this)[i]; //cast this object to a float and read the x, y, z values as float pointers. Neat little trick.
 }
-
 #endif

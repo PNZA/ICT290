@@ -115,9 +115,8 @@ inline CAngles CAngles::operator-(void)
 
 inline CAngles& CAngles::operator-=(const CAngles& otherAngle)
 {
-	CAngles result;	
-	AngleSubtract(*this, otherAngle, result);
-	return result;
+	AngleSubtract(*this, otherAngle, *this);
+	return *this;
 }
 
 inline float& CAngles::operator[](int i) const

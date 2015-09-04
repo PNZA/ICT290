@@ -2,9 +2,10 @@
 #include <GL/glut.h>
 #include <time.h>
 
-//#include <windows.h> // only used if mouse is required (not portable)
+#include <windows.h> // only used if mouse is required (not portable)
 #include "camera.h"
 #include "texturedPolygons.h"
+#include "types/world_geometry.h"
 
 //--------------------------------------------------------------------------------------
 
@@ -12,7 +13,7 @@
 
 // USE THESE STTEINGS TO CHANGE SPEED (on different spec computers)
 // Set speed (steps)
-GLdouble movementSpeed = 10.0;
+GLdouble movementSpeed = 100.0;
 GLdouble rotationSpeed = 0.005;
 
 // TEXTURE IMAGE AXISES
@@ -26,7 +27,8 @@ GLdouble rotationSpeed = 0.005;
 #define FLAT_PLAIN	0
 #define XY_PLAIN	1
 #define ZY_PLAIN	2
-
+//move all this shit out of the way
+#if 1 
 // TEXTURES
 // Grass Textures
 #define GRASS						1
@@ -273,10 +275,9 @@ GLdouble rotationSpeed = 0.005;
 #define MAP							217
 #define WELCOME						218
 #define EXIT						219
-#define NO_EXIT						222
-
+#define NO_EXIT						222 //move all this shit out of the way
+#endif
 // 223 Next
-
 
 //--------------------------------------------------------------------------------------
 
@@ -400,10 +401,83 @@ void CreatePlains();
 // deletes image and clears memory
 void DeleteImageFromMemory(unsigned char* tempImage);
 
+GeometryManager& geo_manage = GeometryManager::GetInstance();
+
+void debug_displayText( float x, float y, int r, int g, int b, const char *string ) {
+	int j = strlen( string );
+ 
+	glColor3f( r, g, b );
+	glRasterPos2f( x, y );
+	for( int i = 0; i < j; i++ ) {
+		glutBitmapCharacter( GLUT_BITMAP_TIMES_ROMAN_24, string[i] );
+	}
+	printf("%s\n", string);
+}
+
+void AddICT290Objects()
+{
+	glEnable(GL_CULL_FACE);
+	glCullFace(GL_BACK);
+	GeometryBuilder builder;
+
+	STexInfo tex_info;
+
+	tex_info.tex_id = 220;
+
+	int area = builder.NewArea();
+	builder.StartObject();
+		builder.CreateVertical(CVector(2120, 10000, 42964), CVector(-6000, 10000, 42964),
+			896, GEO_V_LEFT, tex_info);
+		builder.CreateVertical(CVector(2120, 10000, 41168), CVector(-6000, 10000, 41168),
+			896, GEO_V_RIGHT, tex_info);
+		builder.CreateHorizontal(CVector(2120, 10000, 41168), CVector(-6000, 10000, 41168),
+			1796, GEO_H_UP, tex_info);
+		builder.CreateVertical(CVector(-6000, 10000, 41168), CVector(-8000, 10000, 35000),
+			500, GEO_V_RIGHT, tex_info);
+	builder.EndObject();
+
+	builder.StartObject();
+		builder.CreateStairs(CVector(-6000, 10000, 41168), CVector(-12000, 12000, 42964),
+			10, tex_info, tex_info);
+	builder.EndObject();
+
+	geo_manage.EnableArea(area);
+
+	geo_manage.CompileAll();
+	
+	int i, j;
+	for(i = 0; i < geo_manage.ActiveAreas().size(); i++)
+	{
+		for(j = 0; j < geo_manage.GeometryInAreaCount(i); j++)
+		{
+			cout << geo_manage.GetGeometry(i, j);
+		}
+	}
+}
+
+void DrawICT290Objects()
+{
+	int i, j;
+	for(i = 0; i < geo_manage.ActiveAreas().size(); i++)
+	{
+		for(j = 0; j < geo_manage.GeometryInAreaCount(i); j++)
+		{
+			if(geo_manage.GetGeometry(i, j).ShouldDraw()){
+				geo_manage.GetGeometry(i, j).Draw();
+			}
+		}
+	}
+}
 //--------------------------------------------------------------------------------------
 //  Main function 
 //--------------------------------------------------------------------------------------
-int main(int argc, char **argv)
+
+#ifdef __cplusplus
+extern "C"
+#endif
+
+#undef main
+int main(int argc, char *argv[])
 {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
@@ -412,6 +486,7 @@ int main(int argc, char **argv)
 	glutCreateWindow("Murdoch University Campus Tour");
 
 	myinit();
+	AddICT290Objects();
 
 	glutIgnoreKeyRepeat(1);
 	glutSpecialFunc(movementKeys);
@@ -447,6 +522,8 @@ void myinit()
 	
 	// settings for glut cylinders
 	glu_cylinder = gluNewQuadric();
+	//glCullFace(GL_BACK);
+	//glEnable(GL_CULL_FACE);
     gluQuadricTexture(glu_cylinder, GL_TRUE );
 
 	// set the world co-ordinates (used to set quadrants for bounding boxes)
@@ -483,9 +560,14 @@ void Display()
 
 	// DISPLAY TEXTURES
 	//enable texture mapping
+	//CVector& pos = cam.GetPos();
+	//sprintf(strbuf,"%f, %f, %f", pos.x, pos.y, pos.z);
+	//debug_displayText(0.2, 0.2, 255, 255, 255, strbuf);
+
 	glEnable (GL_TEXTURE_2D);
 	glPushMatrix();	
 		// displays the welcome screen
+		//drawing of debug text
 		if (DisplayWelcome) cam.DisplayWelcomeScreen (width, height, 1, tp.GetTexture(WELCOME));	
 		// displays the exit screen
 		if (DisplayExit) cam.DisplayWelcomeScreen (width, height, 0, tp.GetTexture(EXIT) );
@@ -755,6 +837,7 @@ void mouseMove(int x, int y)
 //--------------------------------------------------------------------------------------
 void CreateBoundingBoxes()
 {
+	/*
 	// chanc block
 	cam.SetAABBMaxX(0, 35879.0);
 	cam.SetAABBMinX(0, 33808.0);
@@ -856,6 +939,7 @@ void CreateBoundingBoxes()
 	cam.SetAABBMinX(16, 31444.0);
 	cam.SetAABBMaxZ(16, 10395.0);
 	cam.SetAABBMinZ(16, 4590.0);
+	*/
 }
 
 //--------------------------------------------------------------------------------------
@@ -1632,6 +1716,8 @@ void DrawBackdrop()
 	DisplayRoof();
 	DisplayStepBricks ();
 	DisplayBanner();
+	DrawICT290Objects();
+
 	if (lightsOn) DisplayLights ();
 }
 
@@ -4666,9 +4752,9 @@ void DisplayLargerTextures ()
 	glCallList(422);
 	glCallList(423);
 
-	// West Exit
-	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(EXIT_WEST));
-	glCallList(450);
+	// West Exit TODO no more west exit
+	//glBindTexture(GL_TEXTURE_2D, tp.GetTexture(EXIT_WEST));
+	//glCallList(450);
 	glBindTexture(GL_TEXTURE_2D, tp.GetTexture(ABOVE_WINDOW_BLOCK_CHANC));
 	glCallList(451);
 	// window next to steps
@@ -4745,7 +4831,7 @@ void DrawLargerTextures ()
 	tp.CreateYtoZWindowList (414, 8803.0, 9998.0, 775.0, 43096.0, 77.0, 1.0, 0.5625);	// library post
 	tp.CreateYtoZWindowList (422, 33872.0, 10768.0, 64.0, 28646.0, 856.0, 1.0, 1.0);	// top of toilet door female
 	tp.CreateYtoZWindowList (423, 33872.0, 10768.0, 64.0, 30566.0, 840.0, 1.0, 1.0);	// top of toilet door male
-	tp.CreateYtoZWindowList (450, 2352.0, 10000.0, 896.0, 41168.0, 1792.0, 1.0, 1.0);	// west exit
+	//tp.CreateYtoZWindowList (450, 2352.0, 10000.0, 896.0, 41168.0, 1792.0, 1.0, 1.0);	// west exit
 	tp.CreateDisplayList (XZ, 451, 400.0, 256.0, 2352.0, 10896.0, 41168.0, 0.64, 7.0);  // above west exit
 	tp.CreateXtoYWindowList (452, 41127.0, 35280.0, 320.0, 10128.0, 704.0, 0.91, 1.0);	// w 233 window by steps (end of phys sci)
 	tp.CreateDisplayList (XZ, 453, 2.0, 2.0, 35856.0, 9400.0, 40500.0, 180.0, 1380.0);  // block at bottom of steps

@@ -52,22 +52,22 @@ float CVector::GetLength()
 	return length;
 }
 
-float CVector::GetCachedLength()
+float CVector::GetCachedLength() const
 {
 	return length;
 }
 
-float CVector::GetSQLength()
+float CVector::GetSQLength() const
 {
 	return (x*x + y*y + z*z); 
 }
 
-float CVector::DotProduct(const CVector& otherVec)
+float CVector::DotProduct(const CVector& otherVec) const
 {
 	return VectorDotProduct(*this, otherVec);
 }
 
-void CVector::CrossProduct(const CVector& otherVec, CVector& result)
+void CVector::CrossProduct(const CVector& otherVec, CVector& result) const
 {
 	VectorCrossProduct(*this, otherVec, result);
 }

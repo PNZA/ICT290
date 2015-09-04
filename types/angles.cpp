@@ -9,6 +9,7 @@
 
 void CAngles::init(){
 	//do init stuff
+	return;
 }
 
 CAngles::CAngles(float* values)
@@ -63,12 +64,14 @@ void CAngles::GetRotationMatrix()
 {
 	//create matrix here
 	//matrix_4x4 matrix;
+	return;
 }
 
 
-void CAngles::GetRotationMatrix()
+void CAngles::GetRotationMatrix(int axis)
 {
 	//to do rotation in one axis only
+	return;
 }
 
 void CAngles::Normalise()
@@ -76,11 +79,11 @@ void CAngles::Normalise()
 	int i;
 	for(i = 0; i < 3; i++)
 	{
-		while(this[i] > 180.0)
-			this[i] -= 360.0;
+		while((*this)[i] > 180.0)
+			(*this)[i] -= 360.0;
 
-		while(this[i] < 180.0)
-			this[i] += 360.0;
+		while((*this)[i] < 180.0)
+			(*this)[i] += 360.0;
 	}
 }
 /* looks to be kinda hard to implement

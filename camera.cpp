@@ -37,6 +37,11 @@ Camera::Camera()
 	stepSound = es->GetSound(es->Load("sounds/step.wav"));
 }
 
+CVector Camera::GetPos()
+{
+	return CVector(m_x, m_y, m_z);
+}
+
 //--------------------------------------------------------------------------------------
 // Reset camera values
 //--------------------------------------------------------------------------------------
