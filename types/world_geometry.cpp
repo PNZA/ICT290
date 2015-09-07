@@ -104,7 +104,12 @@ void CWorldGeometry::BuildBoundBox()
 	while(itr != m_surfaces.end())
 	{
 		AddToBoundBox(*itr);
+		itr++;
 	}
+
+	CVector threshold = CVector(10, 10, 10);
+	m_boundbox.m_min -= threshold;
+	m_boundbox.m_max += threshold;
 }
 
 /**
@@ -126,6 +131,15 @@ Draws the piece of world geometry
 void CWorldGeometry::Draw()
 {
 	glCallList(1000 + m_geometry_id);
+	
+	glPushMatrix();
+	glLineWidth(2);
+	glColor3f(255,0,0);
+	glBegin(GL_LINE_LOOP);
+		glVertex3fv(m_boundbox.m_min.GetArrayPtr());
+		glVertex3fv(m_boundbox.m_max.GetArrayPtr());
+	glEnd();
+	glPopMatrix();
 	
 	/*unsigned int i, a;
 	for(i = 0; i < m_surfaces.size(); i++)
@@ -162,31 +176,33 @@ void CWorldGeometry::Compile()
 		unsigned int i, a;
 		for(i = 0; i < m_surfaces.size(); i++)
 		{
-			printf("\nCWordGeometry::Compile() Surface %d\n", i);
+			//printf("\nCWordGeometry::Compile() Surface %d\n", i);
 			glBindTexture(GL_TEXTURE_2D, m_surfaces[i].GetTexture());
-			printf("CWorldGeometry::Compile() Texture: %d\n", m_surfaces[i].GetTexture());
+			//printf("CWorldGeometry::Compile() Texture: %d\n", m_surfaces[i].GetTexture());
 			glNormal3fv(m_surfaces[i].GetNormal().GetArrayPtr());
-			printf("CWorldGeometry::Compile() Normal: %f, %f, %f\n", 
-				m_surfaces[i].GetNormal().GetArrayPtr()[0], 
-				m_surfaces[i].GetNormal().GetArrayPtr()[1],
-				m_surfaces[i].GetNormal().GetArrayPtr()[2]);
+			//printf("CWorldGeometry::Compile() Normal: %f, %f, %f\n", 
+			//	m_surfaces[i].GetNormal().GetArrayPtr()[0], 
+			//	m_surfaces[i].GetNormal().GetArrayPtr()[1],
+			//	m_surfaces[i].GetNormal().GetArrayPtr()[2]);
 			glBegin(GL_POLYGON);
 				for(a = 0; a < m_surfaces[i].GetNumVertices(); a++)
 				{
 					glTexCoord2f(m_surfaces[i].GetTexCoord(a).u,	//u axis
 						m_surfaces[i].GetTexCoord(a).v);			//v axis
 
-					printf("CWorldGeometry::Compile() TexCoord: %f, %f\n", m_surfaces[i].GetTexCoord(a).u,
-						m_surfaces[i].GetTexCoord(a).u);
+					//printf("CWorldGeometry::Compile() TexCoord: %f, %f\n", m_surfaces[i].GetTexCoord(a).u,
+					//	m_surfaces[i].GetTexCoord(a).u);
 
 					glVertex3fv(m_surfaces[i].GetVertex(a).GetArrayPtr());
-					printf("CWorldGeometry::Compile() Vert: %f, %f, %f\n", m_surfaces[i].GetVertex(a).GetArrayPtr()[0],
-						m_surfaces[i].GetVertex(a).GetArrayPtr()[1],
-						m_surfaces[i].GetVertex(a).GetArrayPtr()[2]);
+					//printf("CWorldGeometry::Compile() Vert: %f, %f, %f\n", m_surfaces[i].GetVertex(a).GetArrayPtr()[0],
+					//	m_surfaces[i].GetVertex(a).GetArrayPtr()[1],
+					//	m_surfaces[i].GetVertex(a).GetArrayPtr()[2]);
 				}
 			glEnd();
 		}
 	glEndList();
+	printf("Making bound box...\n");
+	BuildBoundBox();
 	printf("CWorldGeometry: Compiled geometry %d\n", 1000 + m_geometry_id);
 }
 
@@ -216,12 +232,12 @@ int GeometryManager::ActiveContainsArea(int area_id)
 	{
 		if(area_id == m_active_areas[i])
 		{
-			printf("GeometryManager: Area %d is active at %d\n", area_id, i);
+			//printf("GeometryManager: Area %d is active at %d\n", area_id, i);
 			return i;
 		}
 			
 	}
-	printf("GeometryManager: Area %d is not active\n", area_id);
+	//printf("GeometryManager: Area %d is not active\n", area_id);
 
 	return -1;
 }
@@ -238,11 +254,11 @@ void GeometryManager::EnableArea(int area_id)
 {
 	if(ActiveContainsArea(area_id) >= 0)
 	{
-		printf("GeometryManager: Area %d already active\n", area_id);
+		//printf("GeometryManager: Area %d already active\n", area_id);
 		return;
 	}
 
-	printf("GeometryManager: Enabling area %d\n", area_id);
+	//printf("GeometryManager: Enabling area %d\n", area_id);
 
 	m_active_areas.push_back(area_id);
 }
@@ -321,7 +337,7 @@ int GeometryBuilder::NewArea()
 {	
 	GeometryManager& geo_manager = GeometryManager::GetInstance();
 	m_curr_area = geo_manager.AreaCreate();
-	printf("GeometryBuilder: Making new area. id = %d\n", m_curr_area);
+	//printf("GeometryBuilder: Making new area. id = %d\n", m_curr_area);
 	return m_curr_area;
 }
 
@@ -332,7 +348,7 @@ void GeometryBuilder::StartObject()
 {
 	if(!m_building_obj)
 	{
-		printf("GeometryBuilder: Starting new object\n");
+		//printf("GeometryBuilder: Starting new object\n");
 		m_building_obj = true;
 	}
 }
@@ -344,7 +360,7 @@ void GeometryBuilder::StartSurface()
 {
 	if(m_building_obj && !m_building_surf)
 	{
-		printf("GeometryBuilder: Starting new surface\n");
+		//printf("GeometryBuilder: Starting new surface\n");
 		m_building_surf = true;
 		m_curr_surf = CWorldGeometrySurface();
 	}
@@ -357,7 +373,7 @@ void GeometryBuilder::Texture(int tex_id)
 {
 	if(m_building_surf && m_building_obj)
 	{
-		printf("GeometryBuilder: Adding texture %d\n", tex_id);
+		//printf("GeometryBuilder: Adding texture %d\n", tex_id);
 		m_curr_surf.SetTexture(tex_id);
 	}
 }
@@ -369,7 +385,7 @@ void GeometryBuilder::TextureCoordinate(float u, float v)
 {
 	if(m_building_surf && m_building_obj)
 	{
-		printf("GeometryBuilder: Adding texture coordinate %f %f\n", u, v);
+		//printf("GeometryBuilder: Adding texture coordinate %f %f\n", u, v);
 		tex_coord_t coord;
 
 		coord.u = u;
@@ -386,7 +402,7 @@ void GeometryBuilder::TextureCoordinate(tex_coord_t& coord)
 {
 	if(m_building_surf && m_building_obj)
 	{
-		printf("GeometryBuilder: Adding texture coordinate %f %f\n", coord.u, coord.v);
+		//printf("GeometryBuilder: Adding texture coordinate %f %f\n", coord.u, coord.v);
 		m_curr_surf.AddTexCoord(coord);
 	}
 }
@@ -398,7 +414,7 @@ void GeometryBuilder::Vertex(float x, float y, float z)
 {
 	if(m_building_surf && m_building_obj)
 	{
-		printf("GeometryBuilder: Adding vertex %f %f %f\n", x, y, z);
+		//printf("GeometryBuilder: Adding vertex %f %f %f\n", x, y, z);
 		CVector vert = CVector(x, y, z);
 		Vertex(vert);
 	}
@@ -412,7 +428,7 @@ void GeometryBuilder::Vertex(float* vert)
 	if(m_building_surf && m_building_obj)
 	{
 		CVector vertex = CVector(vert);
-		cout << "GeometryBuilder: Adding vertex " << vertex << "\n";
+		//cout << "GeometryBuilder: Adding vertex " << vertex << "\n";
 
 		Vertex(vertex);
 	}
@@ -425,7 +441,7 @@ void GeometryBuilder::Vertex(CVector& vert)
 {
 	if(m_building_surf && m_building_obj)
 	{
-		cout << "GeometryBuilder: Adding vertex " << vert << "\n";
+		//cout << "GeometryBuilder: Adding vertex " << vert << "\n";
 		m_curr_surf.AddVertex(vert);
 	}
 }
@@ -445,7 +461,7 @@ void GeometryBuilder::EndSurface()
 
 		m_curr_obj.AddSurface(m_curr_surf);
 		m_curr_surf = CWorldGeometrySurface();
-		printf("GeometryBuilder: Ending Surface\n");
+		//printf("GeometryBuilder: Ending Surface\n");
 	}
 }
 
@@ -457,17 +473,35 @@ void GeometryBuilder::EndObject()
 {
 	if(m_building_obj)
 	{
-		printf("GeometryBuilder: Ending Object\n");
-		printf("GeometryBuilder: Total surfaces: %d\n", m_curr_obj.GetSurfaceCount());
+		//printf("GeometryBuilder: Ending Object\n");
+		//printf("GeometryBuilder: Total surfaces: %d\n", m_curr_obj.GetSurfaceCount());
 		//Get the geometry manager.
 		GeometryManager& geo_manager = GeometryManager::GetInstance();
 
 		m_building_obj = false;
-
 		geo_manager.AddGeometry(m_curr_obj, m_curr_area);
 		m_curr_obj = CWorldGeometry();
 	}
 }
+
+/**
+Gets the correct u and v axis for rotating a texture.
+*/
+/*
+void GeometryBuilder::TextureRotation(float& u, float& v, const STexInfo& info)
+{
+	float u_rot = sin(info.rotation);
+	float v_rot = cos(info.rotation);
+
+	u *= u_rot;
+	v *= v_rot;
+
+}*/
+
+
+//----------------------NOTE----------------------
+//The texture rotation system at the moment is hacky because we don't have time to implement
+//proper calculated rotation. This will not be the case in assignment 2.
 
 /**
 Creates a vertical wall, starting at start and going to end.
@@ -479,43 +513,86 @@ void GeometryBuilder::CreateVertical(const CVector& start, const CVector& end, f
 	{
 		if(flip == GEO_V_RIGHT)
 		{
-			printf("GeometryBuilder: Adding a right wall\n");
+			//printf("GeometryBuilder: Adding a right wall\n");
 			//Right hand wall, normal pointing to the left
-			StartSurface();
-				Texture(texture_info.tex_id);
+			if(texture_info.rotation90) //TODO change this system ENTIRELY.
+			{
+				StartSurface();
+					Texture(texture_info.tex_id);
 
-				TextureCoordinate(1, 0); //bottom right
-				Vertex(start.x, start.y, start.z);
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom right
+					Vertex(start.x, start.y, start.z);
 
-				TextureCoordinate(1, 1); //top right
-				Vertex(start.x, start.y + height, start.z);
+					TextureCoordinate(-1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top right
+					Vertex(start.x, start.y + height, start.z);
 
-				TextureCoordinate(0, 1); //top left
-				Vertex(end.x, end.y + height, end.z);
+					TextureCoordinate(-1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top left
+					Vertex(end.x, end.y + height, end.z);
 
-				TextureCoordinate(0, 0); //bottom left
-				Vertex(end.x, end.y, end.z);
-			EndSurface();
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom left
+					Vertex(end.x, end.y, end.z);
+				EndSurface();
+			}
+			else
+			{
+				StartSurface();
+					Texture(texture_info.tex_id);
+
+					TextureCoordinate(1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom right
+					Vertex(start.x, start.y, start.z);
+
+					TextureCoordinate(1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top right
+					Vertex(start.x, start.y + height, start.z);
+
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top left
+					Vertex(end.x, end.y + height, end.z);
+
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom left
+					Vertex(end.x, end.y, end.z);
+				EndSurface();
+			}
+
 		}
 		else //flip == GEO_V_LEFT
 		{
-			printf("GeometryBuilder: Adding a left wall\n");
+			//printf("GeometryBuilder: Adding a left wall\n");
 			//left hand wall, normal pointing to the right
-			StartSurface();
-				Texture(texture_info.tex_id);
+			if(texture_info.rotation90)
+			{
+				StartSurface();
+					Texture(texture_info.tex_id);
 
-				TextureCoordinate(0, 0); //bottom left
-				Vertex(start.x, start.y, start.z);
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom left
+					Vertex(start.x, start.y, start.z);
 
-				TextureCoordinate(1, 0); //bottom right
-				Vertex(end.x, end.y, end.z);
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom right
+					Vertex(end.x, end.y, end.z);
 
-				TextureCoordinate(1, 1); //top right
-				Vertex(end.x, end.y + height, end.z);
+					TextureCoordinate(-1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top right
+					Vertex(end.x, end.y + height, end.z);
 
-				TextureCoordinate(0, 1); //top left
-				Vertex(start.x, start.y + height, start.z);
-			EndSurface();
+					TextureCoordinate(-1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top left
+					Vertex(start.x, start.y + height, start.z);
+				EndSurface();
+			}
+			else
+			{
+				StartSurface();
+					Texture(texture_info.tex_id);
+
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom left
+					Vertex(start.x, start.y, start.z);
+
+					TextureCoordinate(1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom right
+					Vertex(end.x, end.y, end.z);
+
+					TextureCoordinate(1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top right
+					Vertex(end.x, end.y + height, end.z);
+
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top left
+					Vertex(start.x, start.y + height, start.z);
+				EndSurface();
+			}
 		}
 	}
 }
@@ -526,90 +603,183 @@ void GeometryBuilder::CreateHorizontal(const CVector& start, const CVector& end,
 	{
 		if(flip == GEO_H_DOWN)
 		{
-			printf("GeometryBuilder: Adding a floor\n");
-			StartSurface();
-				Texture(texture_info.tex_id);
+			//printf("GeometryBuilder: Adding a floor\n");
+			if(texture_info.rotation90)
+			{
+				StartSurface();
+					Texture(texture_info.tex_id);
 
-				TextureCoordinate(0, 0); //bottom left
-				Vertex(start.x, start.y, start.z);
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom left
+					Vertex(start.x, start.y, start.z);
 
-				TextureCoordinate(1, 0); //bottom right
-				Vertex(start.x, start.y, start.z + width);
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom right
+					Vertex(start.x, start.y, start.z + width);
 
-				TextureCoordinate(1, 1); //top right
-				Vertex(end.x, end.y, end.z + width);
+					TextureCoordinate(-1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top right
+					Vertex(end.x, end.y, end.z + width);
 
-				TextureCoordinate(0, 1); //top left
-				Vertex(end.x, end.y, end.z);
-			EndSurface();
+					TextureCoordinate(-1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top left
+					Vertex(end.x, end.y, end.z);
+				EndSurface();
+			}
+			else
+			{
+				StartSurface();
+					Texture(texture_info.tex_id);
+
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom left
+					Vertex(start.x, start.y, start.z);
+
+					TextureCoordinate(1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom right
+					Vertex(start.x, start.y, start.z + width);
+
+					TextureCoordinate(1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top right
+					Vertex(end.x, end.y, end.z + width);
+
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top left
+					Vertex(end.x, end.y, end.z);
+				EndSurface();
+			}
 		}
 		else //flip == GEO_H_UP
 		{
-			printf("GeometryBuilder: Adding a roof\n");
-			StartSurface();
-				Texture(texture_info.tex_id);
 
-				TextureCoordinate(0, 1); //top left
-				Vertex(start.x, start.y, start.z);
+			if(texture_info.rotation90)
+			{
+			//printf("GeometryBuilder: Adding a roof\n");
+				StartSurface();
+					Texture(texture_info.tex_id);
 
-				TextureCoordinate(0, 0); //bottom left
-				Vertex(end.x, end.y, end.z);
+					TextureCoordinate(-1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top left
+					Vertex(start.x, start.y, start.z);
 
-				TextureCoordinate(1, 0); //bottom right
-				Vertex(end.x, end.y, end.z + width);
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom left
+					Vertex(end.x, end.y, end.z);
 
-				TextureCoordinate(1, 1); //top right
-				Vertex(start.x, start.y, start.z + width);
-			EndSurface();
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom right
+					Vertex(end.x, end.y, end.z + width);
+
+					TextureCoordinate(-1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top right
+					Vertex(start.x, start.y, start.z + width);
+				EndSurface();
+			}
+			else
+			{
+				StartSurface();
+					Texture(texture_info.tex_id);
+
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top left
+					Vertex(start.x, start.y, start.z);
+
+					TextureCoordinate(0 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom left
+					Vertex(end.x, end.y, end.z);
+
+					TextureCoordinate(1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 0 * texture_info.tex_scale_v + texture_info.tex_offset_v); //bottom right
+					Vertex(end.x, end.y, end.z + width);
+
+					TextureCoordinate(1 * texture_info.tex_scale_u + texture_info.tex_offset_u, 1 * texture_info.tex_scale_v + texture_info.tex_offset_v); //top right
+					Vertex(start.x, start.y, start.z + width);
+				EndSurface();
+			}
 		}
 	}
 }
 // Adam's stair building code
 void GeometryBuilder::CreateStairs(const CVector& start, const CVector& end, int StepCount, const STexInfo& stair_top, const STexInfo& stair_side)
 {
-	CVector total_run, total_rise, total_width;
-	total_run.x = end.x - start.x;   // x,0,0
-    total_rise.y = end.y - start.y;  // 0,y,0
-    total_width.z = end.z - start.z; // 0,0,z
-    CVector run = total_run/StepCount;
-    CVector rise = total_rise/(StepCount + 1);
-
-	printf("GeometryBuilder: Building stairs with %d stairs\n", StepCount);
-	CVector v1,v2,v3,v4;
-    v1 = start;
-    v4 = v1 + total_width;
-    for( int i = 0; i < StepCount; i++ )
+	if(m_building_obj)
 	{
-        v2 = v1 + rise;
-        v3 = v4 + rise;
-        //draw ^ v1 -> v2 -> v3 -> v4
-		StartSurface();
-			Texture(stair_side.tex_id);
-			TextureCoordinate(1, 0);
-			Vertex(v1);
-			TextureCoordinate(1, 1);
-			Vertex(v2);
-			TextureCoordinate(0, 1);
-			Vertex(v3);
-			TextureCoordinate(0, 0);
-			Vertex(v4);
-		EndSurface();
+		CVector total_run, total_rise, total_width;
+		total_run.x = end.x - start.x;   // x,0,0
+		total_rise.y = end.y - start.y;  // 0,y,0
+		total_width.z = end.z - start.z; // 0,0,z
+		CVector run = total_run/StepCount;
+		CVector rise = total_rise/(StepCount + 1);
 
-        v1 = v2 + run;
-        v4 = v3 + run;
-        //draw ^ v2 -> v1 -> v4 -> v3
-		StartSurface();
-			Texture(stair_side.tex_id);
-			TextureCoordinate(1, 0);
-			Vertex(v2);
-			TextureCoordinate(1, 1);
-			Vertex(v1);
-			TextureCoordinate(0, 1);
-			Vertex(v4);
-			TextureCoordinate(0, 0);
-			Vertex(v3);
-		EndSurface();
+		//printf("GeometryBuilder: Building stairs with %d stairs\n", StepCount);
+		CVector v1,v2,v3,v4;
+		v1 = start;
+		v4 = v1 + total_width;
+		for( int i = 0; i < StepCount; i++ )
+		{
+			v2 = v1 + rise;
+			v3 = v4 + rise;
+			//draw ^ v1 -> v2 -> v3 -> v4
+			if(stair_side.rotation90)
+			{
+				StartSurface();
+					Texture(stair_side.tex_id);
+					TextureCoordinate(0 * stair_side.tex_scale_u + stair_side.tex_offset_u, 1 * stair_side.tex_scale_v + stair_side.tex_offset_v);
+					Vertex(v1);
+					TextureCoordinate(-1 * stair_side.tex_scale_u + stair_side.tex_offset_u, 1 * stair_side.tex_scale_v + stair_side.tex_offset_v);
+					Vertex(v2);
+					TextureCoordinate(-1 * stair_side.tex_scale_u + stair_side.tex_offset_u, 0 * stair_side.tex_scale_v + stair_side.tex_offset_v);
+					Vertex(v3);
+					TextureCoordinate(0 * stair_side.tex_scale_u + stair_side.tex_offset_u, 0 * stair_side.tex_scale_v + stair_side.tex_offset_v);
+					Vertex(v4);
+				EndSurface();
+			}
+			else
+			{
+				StartSurface();
+					Texture(stair_side.tex_id);
+					TextureCoordinate(1 * stair_side.tex_scale_u + stair_side.tex_offset_u, 0 * stair_side.tex_scale_v + stair_side.tex_offset_v);
+					Vertex(v1);
+					TextureCoordinate(1 * stair_side.tex_scale_u + stair_side.tex_offset_u, 1 * stair_side.tex_scale_v + stair_side.tex_offset_v);
+					Vertex(v2);
+					TextureCoordinate(0 * stair_side.tex_scale_u + stair_side.tex_offset_u, 1 * stair_side.tex_scale_v + stair_side.tex_offset_v);
+					Vertex(v3);
+					TextureCoordinate(0 * stair_side.tex_scale_u + stair_side.tex_offset_u, 0 * stair_side.tex_scale_v + stair_side.tex_offset_v);
+					Vertex(v4);
+				EndSurface();
+			}
 
-		cout << m_curr_obj << "\n";
+			v1 = v2 + run;
+			v4 = v3 + run;
+			//draw ^ v2 -> v1 -> v4 -> v3
+			if(stair_top.rotation90)
+			{
+				StartSurface();
+					Texture(stair_top.tex_id);
+					TextureCoordinate(0 * stair_top.tex_scale_u + stair_top.tex_offset_u, 1 * stair_top.tex_scale_v + stair_top.tex_offset_v);
+					Vertex(v2);												
+					TextureCoordinate(-1 * stair_top.tex_scale_u + stair_top.tex_offset_u, 1 * stair_top.tex_scale_v + stair_top.tex_offset_v);
+					Vertex(v1);												
+					TextureCoordinate(-1 * stair_top.tex_scale_u + stair_top.tex_offset_u, 0 * stair_top.tex_scale_v + stair_top.tex_offset_v);
+					Vertex(v4);												
+					TextureCoordinate(0 * stair_top.tex_scale_u + stair_top.tex_offset_u, 0 * stair_top.tex_scale_v + stair_top.tex_offset_v);
+					Vertex(v3);
+				EndSurface();
+			}
+			else
+			{
+				StartSurface();
+					Texture(stair_top.tex_id);
+					TextureCoordinate(1 * stair_top.tex_scale_u + stair_top.tex_offset_u, 0 * stair_top.tex_scale_v + stair_top.tex_offset_v);
+					Vertex(v2);												
+					TextureCoordinate(1 * stair_top.tex_scale_u + stair_top.tex_offset_u, 1 * stair_top.tex_scale_v + stair_top.tex_offset_v);
+					Vertex(v1);												
+					TextureCoordinate(0 * stair_top.tex_scale_u + stair_top.tex_offset_u, 1 * stair_top.tex_scale_v + stair_top.tex_offset_v);
+					Vertex(v4);												
+					TextureCoordinate(0 * stair_top.tex_scale_u + stair_top.tex_offset_u, 0 * stair_top.tex_scale_v + stair_top.tex_offset_v);
+					Vertex(v3);
+				EndSurface();
+			}
+		}
 	}
+}
+
+void GeometryBuilder::CreateRectangularPrism(const CVector& bottom_left, float length, float width, float height, const STexInfo& sides, const STexInfo& top)
+{
+	if(m_building_obj)
+	{
+		CreateVertical(bottom_left, CVector(bottom_left.x, bottom_left.y, bottom_left.z + length), height, GEO_V_LEFT, sides);
+		CreateVertical(bottom_left, CVector(bottom_left.x + width, bottom_left.y, bottom_left.z), height, GEO_V_RIGHT, sides);
+		CreateVertical(CVector(bottom_left.x, bottom_left.y, bottom_left.z + length), CVector(bottom_left.x + width, bottom_left.y, bottom_left.z + length), height, GEO_V_LEFT, sides);
+		CreateVertical(CVector(bottom_left.x + width, bottom_left.y, bottom_left.z), CVector(bottom_left.x + width, bottom_left.y, bottom_left.z + length), height, GEO_V_RIGHT, sides);
+
+		CreateHorizontal(bottom_left, CVector(bottom_left.x + width, bottom_left.y, bottom_left.z), length, GEO_H_UP, top);
+		CreateHorizontal(CVector(bottom_left.x, bottom_left.y + height, bottom_left.z), CVector(bottom_left.x + width, bottom_left.y + height, bottom_left.z), length, GEO_H_DOWN, top);
+	}
+
 }

@@ -41,7 +41,7 @@ public:
 /**
 Convert a point defined in local space around loc_origin to a point defined in world space.
 */
-void LocalToWorld(const CVector& loc_origin, const CVector& loc_pos, CVector& world_pos)
+inline void LocalToWorld(const CVector& loc_origin, const CVector& loc_pos, CVector& world_pos)
 {
 	world_pos = loc_origin + loc_pos;
 }
@@ -49,10 +49,9 @@ void LocalToWorld(const CVector& loc_origin, const CVector& loc_pos, CVector& wo
 /**
 Convert a point defined in world space to a point defined in local space around loc_origin.
 */
-void WorldToLocal(const CVector& loc_origin, const CVector& pos, CVector& loc_pos)
+inline void WorldToLocal(const CVector& loc_origin, const CVector& pos, CVector& loc_pos)
 {
 	loc_pos = pos - loc_origin;
 }
-
 
 #endif

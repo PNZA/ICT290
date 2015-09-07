@@ -149,6 +149,7 @@ struct STexInfo
 
 	float tex_offset_u;
 	float tex_offset_v;
+	bool rotation90;
 
 	int tex_id;
 };
@@ -183,6 +184,7 @@ public:
 	void CreateVertical(const CVector& start, const CVector& end, float height, bool flip, const STexInfo& texture_info);
 	void CreateHorizontal(const CVector& start, const CVector& end, float width, bool flip, const STexInfo& texture_info);
 	void CreateStairs(const CVector& start, const CVector& end, int StepCount, const STexInfo& stair_top, const STexInfo& stair_side);
+	void CreateRectangularPrism(const CVector& bottom_left, float length,  float width, float height, const STexInfo& sides, const STexInfo& top);
 
 private:
 	bool m_building_obj;
@@ -191,6 +193,8 @@ private:
 
 	CWorldGeometry m_curr_obj;
 	CWorldGeometrySurface m_curr_surf;
+
+	void TextureRotation(float& u, float& v, const STexInfo& info);
 
 };
 #endif

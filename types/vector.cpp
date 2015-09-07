@@ -72,6 +72,13 @@ void CVector::CrossProduct(const CVector& otherVec, CVector& result) const
 	VectorCrossProduct(*this, otherVec, result);
 }
 
+CVector CVector::CrossProduct(const CVector& otherVec) const
+{
+	CVector result;
+	VectorCrossProduct(*this, otherVec, result);
+	return result;
+}
+
 void CVector::SetArray(float* parray)
 {
 	x = parray[VECTOR_X]; y = parray[VECTOR_Y]; z = parray[VECTOR_Z];
@@ -105,4 +112,9 @@ void CVector::Random(float min, float max)
 void CVector::Negate()
 {
 	x = -x; y = -y; z = -z;
+}
+
+float CVector::DistanceTo(const CVector& otherVec) const
+{
+	return VectorDistanceBetween(*this, otherVec); 
 }

@@ -9,6 +9,7 @@
 
 #include "vector.h"
 #include <vector>
+#include "rayplane.h"
 
 using namespace std;
 
@@ -38,6 +39,11 @@ public:
 	vector<tex_coord_t>::iterator GetTexCoordsBegin();
 	vector<tex_coord_t>::iterator GetTexCoordsEnd();
 
+	vector<CVector>::const_iterator GetVerticesBegin() const;
+	vector<CVector>::const_iterator GetVerticesEnd() const;
+	vector<tex_coord_t>::const_iterator GetTexCoordsBegin() const;
+	vector<tex_coord_t>::const_iterator GetTexCoordsEnd() const;
+
 	const CVector& GetVertex(unsigned int i) const;
 	const tex_coord_t& GetTexCoord(unsigned int i) const;
 
@@ -47,11 +53,15 @@ public:
 	const CVector& GetCachedNormal() const;
 	unsigned int GetNumVertices() const;
 	unsigned int GetNumTexCoords() const;
+	CPlane GetPlane() const;
+
+	void ComputeNormal();
 	bool IsValid() const;
+	void Scale(const CVector& scale);
 
 	void AddVertex(CVector& vertex);
 	void AddTexCoord(tex_coord_t& coord);
-	void ComputeNormal();
+
 
 	CPolygon& operator=(const CPolygon& otherPoly);
 };
@@ -61,11 +71,6 @@ inline CPolygon& CPolygon::operator=(const CPolygon& otherPoly)
 	m_verts = otherPoly.m_verts;
 	m_tex_coords = otherPoly.m_tex_coords;
 	return *this;
-}
-
-inline bool PolygonContainsPoint()
-{
-
 }
 
 #endif

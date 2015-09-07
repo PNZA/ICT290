@@ -6,6 +6,7 @@
 
 #include "polygon.h"
 #include <assert.h>
+#include "../math/physics.h"
 
 CPolygon::CPolygon()
 {
@@ -42,7 +43,15 @@ CPolygon::~CPolygon()
 	m_tex_coords.clear();
 }
 
+//-----------------------------------------------------------------------------
+//Iterators
+//-----------------------------------------------------------------------------
 vector<CVector>::iterator CPolygon::GetVerticesBegin()
+{
+	return m_verts.begin();
+}
+
+vector<CVector>::const_iterator CPolygon::GetVerticesBegin() const
 {
 	return m_verts.begin();
 }
@@ -52,7 +61,17 @@ vector<CVector>::iterator CPolygon::GetVerticesEnd()
 	return m_verts.end();
 }
 
+vector<CVector>::const_iterator CPolygon::GetVerticesEnd() const
+{
+	return m_verts.end();
+}
+
 vector<tex_coord_t>::iterator CPolygon::GetTexCoordsBegin()
+{
+	return m_tex_coords.begin();
+}
+
+vector<tex_coord_t>::const_iterator CPolygon::GetTexCoordsBegin() const
 {
 	return m_tex_coords.begin();
 }
@@ -62,6 +81,27 @@ vector<tex_coord_t>::iterator CPolygon::GetTexCoordsEnd()
 	return m_tex_coords.end();
 }
 
+vector<tex_coord_t>::const_iterator CPolygon::GetTexCoordsEnd() const
+{
+	return m_tex_coords.end();
+}
+
+//-----------------------------------------------------------------------------
+//Add functions
+//-----------------------------------------------------------------------------
+void CPolygon::AddVertex(CVector& vertex)
+{
+	m_verts.push_back(vertex);
+}
+
+void CPolygon::AddTexCoord(tex_coord_t& coord)
+{
+	m_tex_coords.push_back(coord);
+}
+
+//-----------------------------------------------------------------------------
+//Manual get and cached get functions
+//-----------------------------------------------------------------------------
 const CVector& CPolygon::GetVertex(unsigned int i) const
 {
 	assert(i >= 0 && i < m_verts.size());
@@ -120,22 +160,21 @@ unsigned int CPolygon::GetNumTexCoords() const
 	return m_tex_coords.size();
 }
 
+CPlane CPolygon::GetPlane() const
+{
+	return CPlane(GetVertex(0), m_normal);
+}
+
+//-----------------------------------------------------------------------------
+//Calculation functions
+//-----------------------------------------------------------------------------
+
 bool CPolygon::IsValid() const
 {
 	if (m_verts.size() < 2 && m_tex_coords.size() < 2)
 		return false;
 
 	return true;
-}
-
-void CPolygon::AddVertex(CVector& vertex)
-{
-	m_verts.push_back(vertex);
-}
-
-void CPolygon::AddTexCoord(tex_coord_t& coord)
-{
-	m_tex_coords.push_back(coord);
 }
 
 void CPolygon::ComputeNormal()
@@ -145,4 +184,19 @@ void CPolygon::ComputeNormal()
 
 	(m_verts[1] - m_verts[0]).CrossProduct((m_verts[2] - m_verts[0]), m_normal);
 	m_normal.Normalise();
+}
+
+/**
+Scales this polygon to the given scale vector.
+*/
+void CPolygon::Scale(const CVector& scale)
+{
+	int i;
+	for(i = 0; i < m_verts.size(); i++)
+	{
+		m_verts[i] *= scale;
+	}
+
+	m_normal *= scale;
+	m_cached_midpoint *= scale;
 }

@@ -4,7 +4,7 @@
 //			CBaseEntity later if needed.
 //
 //=============================================================================
-#if 0
+#if 1
 #ifndef PLAYER_H
 #define PLAYER_H
 
@@ -81,7 +81,7 @@ private:
 	CVector m_pos;
 	CVector m_camera_attach;
 	CVector m_velocity;
-	CCamera m_camera;
+	//CCamera m_camera;
 
 	int m_player_control_state;
 
@@ -92,20 +92,24 @@ private:
 	void UpdateMovement();
 	void UpdateCamera();
 
-	void DetectWorldCollision();
-	void CollideWithWorld(CVector& point, CVector& velocity, const CVector& rad_divide);
+	void DoWorldCollision();
+	//CollisionList CalculateColliders(vector<CPolygon*>& potential_colliders, const CVector& scaler, const CRay& r);
+	CVector CollideWithWorld(vector<CPolygon*>& potential_colliders);
 	void OnCollideWithWorld();
 	
 public:
+	void CalculateColliders(vector<CPolygon*>& potential_colliders, const CVector& scaler, const CRay& r, CollisionList& colliders);
 	CPlayer();
 	~CPlayer(){};
 
 	void Update(const SPlayerEventState& new_state); //Fully updates the player
 
-	void SetPos(CVector& pos); //Sets the players position
-	const CVector& GetPos(); //Gets the players position
+	void SetPos(const CVector& pos); //Sets the players position
+	const CVector& GetPos() {return m_pos;}; //Gets the players position
 	const CVector& GetCameraAttach(); //Gets where the camera is on the player in world coordinates.
 	const CVector& GetCameraAttachLocal(); //Gets where the camera is on the player in local coordinates.
+	const CBoundBox& GetBoundBox() {return m_boundbox;};
+	const CVector& GetVelocity() {return m_velocity;};
 
 	float GetRadius();
 	float GetHeight();

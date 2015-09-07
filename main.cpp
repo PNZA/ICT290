@@ -6,9 +6,10 @@
 #include "camera.h"
 #include "texturedPolygons.h"
 #include "types/world_geometry.h"
+#include "player.h"
 
 //--------------------------------------------------------------------------------------
-
+#if 1
 #define PI 3.1415962654
 
 // USE THESE STTEINGS TO CHANGE SPEED (on different spec computers)
@@ -27,7 +28,7 @@ GLdouble rotationSpeed = 0.005;
 #define FLAT_PLAIN	0
 #define XY_PLAIN	1
 #define ZY_PLAIN	2
-//move all this shit out of the way
+
 #if 1 
 // TEXTURES
 // Grass Textures
@@ -313,6 +314,7 @@ unsigned char* image = NULL;
 
 // objects
 Camera cam;
+CPlayer player;
 TexturedPolygons tp;
 
 // initializes setting
@@ -422,18 +424,34 @@ void AddICT290Objects()
 
 	STexInfo tex_info;
 
-	tex_info.tex_id = 220;
+	tex_info.tex_id = 16;
+	tex_info.tex_offset_u = 0.0;
+	tex_info.tex_offset_v = 0.0;
+	tex_info.tex_scale_u = 1;
+	tex_info.tex_scale_v = 1;
+	tex_info.rotation90 = true;
 
 	int area = builder.NewArea();
 	builder.StartObject();
-		builder.CreateVertical(CVector(2120, 10000, 42964), CVector(-6000, 10000, 42964),
-			896, GEO_V_LEFT, tex_info);
 		builder.CreateVertical(CVector(2120, 10000, 41168), CVector(-6000, 10000, 41168),
 			896, GEO_V_RIGHT, tex_info);
+	builder.EndObject();
+
+	tex_info.rotation90 = false;
+	builder.StartObject();
+		builder.CreateVertical(CVector(2120, 10000, 42964), CVector(-6000, 10000, 42964),
+			896, GEO_V_LEFT, tex_info);
+	builder.EndObject();
+
+	builder.StartObject();
 		builder.CreateHorizontal(CVector(2120, 10000, 41168), CVector(-6000, 10000, 41168),
 			1796, GEO_H_UP, tex_info);
-		builder.CreateVertical(CVector(-6000, 10000, 41168), CVector(-8000, 10000, 35000),
-			500, GEO_V_RIGHT, tex_info);
+	builder.EndObject();
+
+	tex_info.rotation90 = true;
+	builder.StartObject();
+		builder.CreateHorizontal(CVector(2120, 10896, 41168), CVector(-6000, 10896, 41168),
+			1796, GEO_H_DOWN, tex_info);
 	builder.EndObject();
 
 	builder.StartObject();
@@ -441,18 +459,14 @@ void AddICT290Objects()
 			10, tex_info, tex_info);
 	builder.EndObject();
 
+	builder.StartObject();
+		builder.CreateRectangularPrism(CVector(-12000, 10000, 42964), 1000, 1000, 1000, tex_info, tex_info);
+	builder.EndObject();
+
 	geo_manage.EnableArea(area);
 
 	geo_manage.CompileAll();
 	
-	int i, j;
-	for(i = 0; i < geo_manage.ActiveAreas().size(); i++)
-	{
-		for(j = 0; j < geo_manage.GeometryInAreaCount(i); j++)
-		{
-			cout << geo_manage.GetGeometry(i, j);
-		}
-	}
 }
 
 void DrawICT290Objects()
@@ -471,10 +485,6 @@ void DrawICT290Objects()
 //--------------------------------------------------------------------------------------
 //  Main function 
 //--------------------------------------------------------------------------------------
-
-#ifdef __cplusplus
-extern "C"
-#endif
 
 #undef main
 int main(int argc, char *argv[])
@@ -535,6 +545,8 @@ void myinit()
 	// set starting position of user
 	cam.Position(32720.0, 9536.0,	
 				 4800.0, 180.0);
+	cam.Position(5150.0, 10450.0,	
+				 41571.4, 180.0);
 	
 	CreatePlains();	
 	
@@ -785,7 +797,7 @@ void Mouse(int button, int state, int x, int y)
 		if ((DisplayExit) && (x <= width/2.0 + 256.0) && (x >= width/2.0 - 256.0)
 			&& (y <= height/2.0 + 256.0) && (y >= height/2.0 - 256.0))
 		{
-			DeleteImageFromMemory(image);
+			//DeleteImageFromMemory(image);
 			exit(1);
 		}
   	 }
@@ -5298,3 +5310,5 @@ void IncrementFrameCount()
 		lastClock = clock();
 	}
 }
+
+#endif

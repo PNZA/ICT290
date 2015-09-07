@@ -5,6 +5,7 @@
 //=============================================================================
 
 #include "bound_box.h"
+#include "../math/mathlib.h"
 
 /**
 Initialises this bounding box to all 0's.
@@ -85,7 +86,11 @@ void CBoundBox::UpdateBounds(const CVector& point)
 			m_min.z = point.z;
 	}
 
-
+	//Needed because the box might not have a max yet.
+	if(m_max.x == 0 || m_max.y == 0 || m_max.y == 0)
+	{
+		m_max = point;
+	}
 
 	if(point.x > m_max.x)
 		m_max.x = point.x;
@@ -141,12 +146,12 @@ bool CBoundBox::ContainsPoint(const CVector& point) const
 }
 
 /**
-Translates the box in the given direction.
+Translates the box to the given location
 */
-void CBoundBox::Translate(const CVector& direction)
+void CBoundBox::Translate(const CVector& dir)
 {
-	m_min += direction;
-	m_max += direction;
+	m_min += dir;
+	m_max += dir;
 }
 
 /**

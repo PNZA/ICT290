@@ -36,12 +36,15 @@ public:
 
 	float DotProduct(const CVector& otherVec) const;	//performs the vector dot product: this . otherVec
 	void CrossProduct(const CVector& otherVec, CVector& result) const;	//performs the vector cross product: this X otherVec -> result
+	CVector CrossProduct(const CVector& otherVec) const; //performs vector cross product but returns the result
 	void SetArray(float* parray); //sets this vector to the given 3 float array
 	float* GetArrayPtr() const; 
 	void Normalise();	//normalises this vector, if it is a vector and not a point
 	//void GetAngleBetween(const CVector &otherVec, CAngles &angles);
 	void Random(float min, float max);
 	void Negate();
+
+	float DistanceTo(const CVector& otherVec) const;
 
 	CVector operator+(const CVector& otherVec) const;
 	CVector& operator+=(const CVector& otherVec);
@@ -51,7 +54,7 @@ public:
 	CVector& operator-=(const CVector& otherVec);
 
 	CVector operator*(const CVector& otherVec) const;
-	CVector operator*(float s);
+	CVector operator*(float s) const;
 	CVector& operator*=(const CVector& otherVec);
 	CVector& operator*=(float s);
 
@@ -235,7 +238,7 @@ inline CVector CVector::operator*(const CVector& otherVec) const
 
 }
 
-inline CVector CVector::operator*(float s)
+inline CVector CVector::operator*(float s) const
 {
 	CVector result;
 	VectorMultiply(*this, s, result);
