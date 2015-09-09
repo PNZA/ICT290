@@ -1,0 +1,373 @@
+﻿Build started 9/09/2015 10:15:34 AM.
+     1>Project "C:\Users\Prini\Desktop\ICT290\Assignment 1\Assignment 1\Assignment 1.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (ICT290.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _CRT_SECURE_NO_WARNINGS /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"Debug\\" /Fd"Debug\vc140.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\types\world_geometry.h(78): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\types\world_geometry.h(84): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\math\mathlib.h(13): warning C4005: 'PI': macro redefinition
+         c:\users\prini\desktop\ict290\assignment 1\assignment 1\camera.h(11): note: see previous definition of 'PI'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\math\physics.h(108): warning C4018: '>=': signed/unsigned mismatch
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\math\physics.h(169): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\math\physics.h(177): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\math\physics.h(205): warning C4305: 'argument': truncation from 'double' to 'float'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(13): warning C4005: 'PI': macro redefinition
+         c:\users\prini\desktop\ict290\assignment 1\assignment 1\math\mathlib.h(13): note: see previous definition of 'PI'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(411): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(499): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(506): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(513): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(519): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(525): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(531): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(537): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(544): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(550): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(556): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(563): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(569): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(575): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(581): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(587): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(593): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(599): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(605): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(612): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(618): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(624): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(630): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(636): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(642): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(648): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(660): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(666): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(672): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(678): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(684): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(690): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(696): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(703): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(709): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(715): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(721): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(727): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(733): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(739): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(746): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(753): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(759): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(765): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(771): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(781): warning C4018: '<': signed/unsigned mismatch
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(832): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(1126): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(1132): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(1142): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(1147): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2106): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2132): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2149): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2388): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2476): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2488): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2554): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2555): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2556): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2557): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2558): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2560): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2567): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2568): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2569): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2570): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2571): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2573): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2581): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2582): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2583): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2584): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2585): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2587): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2653): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2657): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2737): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2742): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2746): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2752): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2756): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2763): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2767): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2773): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2790): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2794): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2800): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2804): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2844): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2851): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2862): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2869): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2892): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2906): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2926): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2964): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2965): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2966): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(2967): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3017): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3025): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3032): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3045): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3053): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3119): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3120): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3121): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3122): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3131): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3132): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3133): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3134): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3425): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3627): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3642): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3658): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3678): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3701): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3705): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3724): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3728): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3748): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3752): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3772): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3776): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3837): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3838): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3839): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3840): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3842): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3849): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3850): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3851): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3852): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3853): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3862): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3864): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3865): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3866): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3867): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3868): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3876): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3877): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3878): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3879): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3880): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3881): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3891): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3892): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3893): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3894): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3904): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3905): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3906): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3907): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3915): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3916): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3917): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3918): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3919): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3920): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3930): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3931): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3932): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3933): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3943): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3944): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3945): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3946): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3953): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3954): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3955): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3956): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3957): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3958): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3959): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3966): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3968): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3969): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3970): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3971): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3972): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3979): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3981): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3982): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3983): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3984): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3985): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3993): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3994): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3995): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3996): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(3997): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4008): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4010): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4021): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4023): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4067): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4069): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4070): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4071): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4071): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4072): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4073): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4073): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4079): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4081): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4082): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4083): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4083): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4084): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4085): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4085): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4095): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4097): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4098): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4099): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4100): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4101): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4107): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4109): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4110): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4111): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4112): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4113): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4143): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4147): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4204): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4231): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4245): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4273): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4300): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4314): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4474): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4508): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4539): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4582): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4587): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4718): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4720): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4721): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4722): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4723): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4730): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4732): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4733): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4734): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4735): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4742): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4744): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4745): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4746): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4747): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4754): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4756): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4757): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4758): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4759): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4768): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4769): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4770): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4771): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4804): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4815): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4827): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4861): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4872): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4884): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4894): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4907): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(4991): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5002): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5013): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5025): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5043): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5269): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5276): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5283): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5303): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5303): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5307): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5307): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5323): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5323): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5327): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5327): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5434): warning C4244: 'argument': conversion from 'GLdouble' to 'GLfloat', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5443): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5450): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5457): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5463): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5464): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5465): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5476): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5483): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5490): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5496): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5497): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5498): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5510): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5511): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5513): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5514): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5516): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5517): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5519): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5520): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5522): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5523): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5528): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5533): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5538): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5544): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5546): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5547): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5548): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5549): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5550): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5551): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5552): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5553): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5554): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5555): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+     1>c:\users\prini\desktop\ict290\assignment 1\assignment 1\main.cpp(5556): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Prini\Desktop\ICT290\Assignment 1\Debug\Assignment 1.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Prini\Desktop\ICT290\Assignment 1\Debug\Assignment 1.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Prini\Desktop\ICT290\Assignment 1\Debug\Assignment 1.lib" /MACHINE:X86 Debug\AABB.obj
+         Debug\AABBLinkedList.obj
+         Debug\AABBNode.obj
+         Debug\camera.obj
+         Debug\cameraMap.obj
+         Debug\collision.obj
+         Debug\EasySound.obj
+         Debug\main.obj
+         Debug\mathlib.obj
+         Debug\physics.obj
+         Debug\PlainLinkedList.obj
+         Debug\PlainNode.obj
+         Debug\player.obj
+         Debug\SizeAndOffset.obj
+         Debug\SizeAndOffsetTool.obj
+         Debug\Sound.obj
+         Debug\SoundTime.obj
+         Debug\test_main.obj
+         Debug\texturedPolygons.obj
+         Debug\angles.obj
+         Debug\bound_box.obj
+         Debug\polygon.obj
+         Debug\rayplane.obj
+         Debug\vector.obj
+         Debug\world_geometry.obj
+         Assignment 1.vcxproj -> C:\Users\Prini\Desktop\ICT290\Assignment 1\Debug\Assignment 1.exe
+     1>Done Building Project "C:\Users\Prini\Desktop\ICT290\Assignment 1\Assignment 1\Assignment 1.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.81

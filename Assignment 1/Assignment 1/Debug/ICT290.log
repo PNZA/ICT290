@@ -1,0 +1,42 @@
+﻿Build started 9/09/2015 9:32:44 AM.
+     1>Project "C:\Users\Prini\Desktop\ICT290\ICT290.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Prini\Desktop\ICT290\Debug\ICT290.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Prini\Desktop\ICT290\Debug\ICT290.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Prini\Desktop\ICT290\Debug\ICT290.lib" /MACHINE:X86 "Debug\Assignment 1.res"
+         Debug\AABB.obj
+         Debug\AABBLinkedList.obj
+         Debug\AABBNode.obj
+         Debug\camera.obj
+         Debug\cameraMap.obj
+         Debug\collision.obj
+         Debug\EasySound.obj
+         Debug\main.obj
+         Debug\mathlib.obj
+         Debug\physics.obj
+         Debug\PlainLinkedList.obj
+         Debug\PlainNode.obj
+         Debug\player.obj
+         Debug\SizeAndOffset.obj
+         Debug\Sound.obj
+         Debug\SoundTime.obj
+         Debug\SizeAndOffsetTool.obj
+         Debug\polygon_test.obj
+         Debug\vector_test.obj
+         Debug\test_main.obj
+         Debug\texturedPolygons.obj
+         Debug\angles.obj
+         Debug\bound_box.obj
+         Debug\polygon.obj
+         Debug\rayplane.obj
+         Debug\vector.obj
+         Debug\world_geometry.obj
+     1>SDLmain.lib(SDL_win32_main.obj) : error LNK2005: _main already defined in main.obj
+     1>MSVCRTD.lib(initializers.obj) : warning LNK4098: defaultlib 'msvcrt.lib' conflicts with use of other libs; use /NODEFAULTLIB:library
+     1>SDLmain.lib(SDL_win32_main.obj) : warning LNK4217: locally defined symbol _fprintf imported in function _ShowError
+     1>SDLmain.lib(SDL_win32_main.obj) : error LNK2019: unresolved external symbol _SDL_main referenced in function _main
+     1>SDLmain.lib(SDL_win32_main.obj) : error LNK2019: unresolved external symbol __imp____iob_func referenced in function _ShowError
+     1>C:\Users\Prini\Desktop\ICT290\Debug\ICT290.exe : fatal error LNK1120: 2 unresolved externals
+     1>Done Building Project "C:\Users\Prini\Desktop\ICT290\ICT290.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.93
